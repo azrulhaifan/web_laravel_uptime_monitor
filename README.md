@@ -33,6 +33,7 @@ This application can be installed on local server and online server with these s
 1. `$ cd uptime-monitor`
 1. Install PHP dependencies: `$ composer install`
 1. Install javscript dependencies: `$ npm install`
+1. Publish livewire assets `php artisan vendor:publish --force --tag=livewire:assets`
 1. Copy `.env.example` to `.env`: `$ cp .env.example .env`
 1. Generate application key: `$ php artisan key:generate`
 1. Create a MySQL or MariaDB database.
@@ -77,7 +78,7 @@ In order to get notified in Telegram when the customer sites are down, we need t
     - Go to Customer Site menu
     - Select one of the customer site and click Edit link
     - Set the Notify User Interval field, between 0 to 60.
-    - Set the Notify User Interval field to 0 if you don't want to get notified.
+    - Set the Notify User Interval field to 0 if you don't want to get notified.'
 
 ### Tips
 Set QUEUE_CONNECTION variable on your .env to database and use supervisor to optime monitoring check, using this approach you can achieve near to async check proccess
